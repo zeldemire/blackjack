@@ -1,8 +1,5 @@
 package edu.miami.cse.agents.blackjack;
 
-import java.util.Random;
-
-
 /**
  * A dealer takes the {@link Action#HIT} action until their cards total 17 or
  * more points. Then the dealer takes the {@link Action#STAND} action.
@@ -24,11 +21,7 @@ public class DealerAgent{
 	public Action act(Hand cards) {
 		
 		// dummy code update it as explained in the homework
-		
-		Random random = new Random();
-	    Boolean r = random.nextBoolean();
-	    
-		if(r)
+		if (cards.getValue() > 16)
 			return Action.STAND;
 		else
 			return Action.HIT;
